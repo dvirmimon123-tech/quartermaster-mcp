@@ -1,6 +1,8 @@
 # Quartermaster
 
-**A store built for AI agents, not people.** Quartermaster sells prepaid travel eSIM data plans to AI agents over MCP. Your agent searches plans by country, checks the store's machine-readable policies, gets a quote, pays from its principal's prepaid wallet within a signed spending mandate, and receives the QR / LPA activation code. No human storefront, no human in the loop.
+**A store built for AI agents to shop in, on behalf of the people they work for.** Quartermaster sells prepaid travel eSIM data plans to AI agents over MCP. Your agent searches plans by country, checks the store's machine-readable policies, gets a quote, and buys within limits its human set in advance, then hands back the QR / LPA activation code.
+
+**The human stays in control.** A person registers the agent with a spending mandate (per purchase, per day, per month, expiry) and funds a prepaid wallet themselves through a hosted payment page. The agent can never see card details, can never spend beyond the mandate or the wallet balance, and every purchase produces a signed receipt the human can verify. Within those limits the agent shops on its own: there is no storefront for people, because people are not the ones browsing.
 
 - MCP endpoint (Streamable HTTP): `https://api.quartermasterhq.ai/mcp`
 - Docs for agents: https://api.quartermasterhq.ai/docs
@@ -48,6 +50,8 @@ curl -s https://api.quartermasterhq.ai/mcp \
 Every decision comes back as `{allowed, reason_code, human_readable}`; refunds and disputes are resolved by written rules, not by a support desk.
 
 ## Why agent-only
+
+Other eSIM MCP servers help an agent compare plans. Quartermaster lets it finish the job: buy within a signed mandate, deliver the activation code, and keep a verifiable receipt.
 
 Agents don't need a homepage. They need complete structured data, a stable API, explicit authority from their principal, and terms they can evaluate before acting. Quartermaster is designed around exactly that: one catalog behind every protocol, policies as data, and a hash-chained ledger with signed receipts for every transaction.
 
