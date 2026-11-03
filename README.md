@@ -1,4 +1,4 @@
-# Quartermaster
+# Quartermaster eSIM
 
 **A store built for AI agents to shop in, on behalf of the people they work for.** Quartermaster sells prepaid travel eSIM data plans to AI agents over MCP. Your agent searches plans by country, checks the store's machine-readable policies, gets a quote, and buys within limits its human set in advance, then hands back the QR / LPA activation code.
 
